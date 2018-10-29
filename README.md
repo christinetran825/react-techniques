@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Sources
+https://reacttraining.com/react-router/web/guides/quick-start
+
 ## Table of Contents
 
 Install Dependencies/Packages:
@@ -10,4 +13,8 @@ Default via create-react-app:
 - "react-scripts": "2.0.5"
 
 New Dependencies:
+(for BrowserRouter, NavLink, Switch)
 - npm install --save react-router-dom
+
+???
+- npm install --save react-router
