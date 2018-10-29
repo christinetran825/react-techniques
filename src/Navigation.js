@@ -1,33 +1,57 @@
 import React, {Component} from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-class Navigation extends Component {
-  render() {
-    const logo = (
-      <li id="logo"><Link to="/">React Techniques</Link></li>
-    )
+const logoStyle = {
+  color: "tomato",
+  textDecoration: "none",
+};
+const linkStyle = {
+  padding: "50px",
+  textDecoration: "none",
+  fontWeight: "bold",
+  color: "white"
+};
+const activeLinks = {
+  color: "green"
+};
 
-    return (
-      <header className="App-header">
-        <navbar className="main-nav">
-          <ul>
-            {logo}
-            <li><Link to="/buttons"> Buttons</Link></li>
-            <li><Link to="/forms"> Forms</Link></li>
-          </ul>
+const Navigation = () =>
+  <header className="App-header">
+    <navbar className="main-nav">
+      <ul>
+        <NavLink
+          exact to="/"
+          id="logo"
+          style={logoStyle}
+        >
+          React Techniques
+        </NavLink>
+        <NavLink
+          to="/buttons"
+          style={linkStyle}
+          activeStyle={activeLinks}
+        >
+          Buttons
+        </NavLink>
+        <NavLink
+          to="/forms"
+          style={linkStyle}
+          activeStyle={activeLinks}
+        >
+          Forms
+        </NavLink>
+      </ul>
 
-          {/* <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
-        </navbar>
-      </header>
-    )
-  }
-}
+      {/* <NavLink
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </NavLink> */}
+    </navbar>
+  </header>
+
 
 export default Navigation;
