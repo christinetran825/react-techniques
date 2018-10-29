@@ -16,3 +16,14 @@
 .App-link {
   color: #61dafb;
 }
+
+button {
+  background-color: tomato;
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+}
