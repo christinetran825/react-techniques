@@ -12,9 +12,15 @@ Default via create-react-app:
 - "react-dom": "^16.6.0",
 - "react-scripts": "2.0.5"
 
-New Dependencies:
-(for BrowserRouter, NavLink, Switch)
+### BrowserRouter, NavLink, Switch
 - npm install --save react-router-dom
+- npm install --save react-router (default when using create-react-app)
 
-???
-- npm install --save react-router
+### Icons - React + Font Awesome
+- https://fontawesome.com/how-to-use/on-the-web/using-with/react
+- https://github.com/FortAwesome/react-fontawesome
+- npm i --save @fortawesome/fontawesome-svg-core
+- npm i --save @fortawesome/free-brands-svg-icons
+- npm i --save @fortawesome/free-regular-svg-icons
+- npm i --save @fortawesome/free-solid-svg-icons
+- npm i --save @fortawesome/react-fontawesome
