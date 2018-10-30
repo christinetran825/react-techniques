@@ -55,13 +55,29 @@ class Likes extends React.Component {
 
   render(){
     return(
-      <div className="communication-buttons">
+      <div className="likes">
         <h2>Likes & Dislikes</h2>
-        <h3>Counter</h3>
-        <p>Likes</p>
-        <button className={this.state.likeClassNames} onClick={this.updateLikes}>Like | <span class="likes-counter"> {this.state.likes}</span></button>
-        <p>Dislikes</p>
-        <button className={this.state.dislikeClassNames} onClick={this.updateDislikes}>Dislike | <span class="likes-counter">{this.state.dislikes}</span></button>
+
+
+        <div className="likes-counters">
+          <h3>Counter Inside Button</h3>
+          <button className={this.state.likeClassNames} onClick={this.updateLikes}>Like | <span class="likes-counter"> {this.state.likes}</span></button>
+          <button className={this.state.dislikeClassNames} onClick={this.updateDislikes}>Dislike | <span class="likes-counter">{this.state.dislikes}</span></button>
+        </div>
+
+        <div className="likes-counters">
+          <h3>Counter Outside Button</h3>
+          <div>
+            <button className={this.state.likeClassNames} onClick={this.updateLikes}>Like</button><span class="likes-counter"> {this.state.likes}</span>
+          </div>
+          <div>
+            <button className={this.state.dislikeClassNames} onClick={this.updateDislikes}>Dislike</button><span class="likes-counter">{this.state.dislikes}</span>
+          </div>
+        </div>
+
+        <div className="likes-counters">
+          <h3>Icons Counter</h3>
+        </div>
       </div>
     );
   }
