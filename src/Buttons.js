@@ -1,13 +1,15 @@
 import React from 'react';
 import Likes from './Likes.js'
+import Icons from './Icons.js'
 
 class Buttons extends React.Component {
 
   render(){
     return(
-      <div>
+      <section className="button-types">
         <Likes/>
-      </div>
+        <Icons/>
+      </section>
     );
   }
 
