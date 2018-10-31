@@ -9,7 +9,11 @@ class Likes extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      simple: "simple",
+      rectangle: "rectangle",
+      square: "square",
+      roundSquare: "square round",
+      circle: "square circle",
     };
   }
 
@@ -26,49 +30,78 @@ class Likes extends React.Component {
 
     const brandsCircle = ["pinterest", "github"]
 
+//Icons
     const brandsSimpleIcons = brandsSimple.map(brand =>
-      <FontAwesomeIcon className="icons" icon={['fab', `${brand}`]} size="4x"/>
+      <FontAwesomeIcon icon={['fab', `${brand}`]} size="4x" className="icons"/>
     )
 
     const brandsSquareIcons = brandsSquare.map(brand =>
-      <FontAwesomeIcon className="icons" icon={['fab', `${brand}`]} size="5x"/>
+      <FontAwesomeIcon icon={['fab', `${brand}`]} size="5x" className="icons"/>
     )
 
     const brandsCircleIcons = brandsCircle.map(brand =>
-      <FontAwesomeIcon className="icons" icon={['fab', `${brand}`]} size="5x" />
+      <FontAwesomeIcon icon={['fab', `${brand}`]} size="5x" className="icons"/>
     )
 
-    const brandsSimpleButtons = brandsSimple.map(brand =>
-      <button className="social-media"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
+//Buttons
+    const brandsRectButtons = brandsSimple.map(brand =>
+      <button className={this.state.rectangle}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
     )
 
     const brandsSquareButtons = brandsSquare.map(brand =>
-      <button className="social-media shape"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} className="roundsquare" /></Link></button>
+      <button className={this.state.square}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
+    )
+
+    const brandsRoundSquareButtons = brandsSquare.map(brand =>
+      <button className={this.state.roundSquare}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
     )
 
     const brandsCircleButtons = brandsCircle.map(brand =>
-      <button className="social-media circle"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
+      <button className={this.state.circle}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
     )
 
     return(
       <div className="icons-brands">
-        <div className="buttons-social-media">
-          <h3>social sharing?</h3>
-          <h3>Icons Only</h3>
+        <div className="icon-only no-counter">
+          <h2>Icons Only</h2>
           {brandsSimpleIcons}
           <br></br>
           {brandsSquareIcons}
           <br></br>
           {brandsCircleIcons}
           <br></br>
-          <h3>Rectangle</h3>
-          <h3>Square</h3>
-          {brandsSimpleButtons}
-          {brandsSquareButtons}
-          {brandsCircleButtons}
-          <h3>Round Square</h3>
-          <h3>Circle</h3>
         </div>
+        {/* <div className="icon-only counter">
+          <h2>Icons Only with Counter</h2>
+          {brandsSimpleIcons}
+          <br></br>
+          {brandsSquareIcons}
+          <br></br>
+          {brandsCircleIcons}
+          <br></br>
+        </div> */}
+        <div className="icon-buttons no-counter">
+          <h2>Icon Buttons</h2>
+          <h3>Rectangle</h3>
+          {brandsRectButtons}
+          <h3>Square</h3>
+          {brandsSquareButtons}
+          <h3>Round Square</h3>
+          {brandsRoundSquareButtons}
+          <h3>Circle</h3>
+          {brandsCircleButtons}
+        </div>
+        {/* <div className="icon-buttons counter">
+          <h2>Icon Buttons with Counter</h2>
+          <h3>Rectangle</h3>
+          {brandsRectButtons}
+          <h3>Square</h3>
+          {brandsSquareButtons}
+          <h3>Round Square</h3>
+          {brandsRoundSquareButtons}
+          <h3>Circle</h3>
+          {brandsCircleButtons}
+        </div> */}
 
         <div className="icons-objects">
           <h3>Icons</h3>

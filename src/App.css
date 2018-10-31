@@ -17,22 +17,6 @@
   color: #61dafb;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-button {
-  background-color: tomato;
-  border: none;
-  color: white;
-  padding: 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 3em;
-}
-
 .icons {
   /* color: tomato; */
   width: 100px;
@@ -73,20 +57,44 @@ button {
   color: #f56040;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: tomato;
+  border: none;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3em;
+  margin: 20px;
+}
+
 li {
   display: inline-block;
 }
 
-.shape {
-  border-radius: 20px;
+.rectangle {
+  width: 180px;
+  height: 100px;
+  padding-top: 25px;
 }
 
-.roundsquare {
-  /* line-height: inherit; */
+.square {
+  width: 100px;
+  height: 100px;
+  padding-top: 25px;
+}
+
+.round {
+  border-radius: 30px;
 }
 
 .circle {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  padding-left: 25px;
 }
