@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from "react-router-dom";
 
 class Likes extends React.Component {
 
@@ -10,7 +12,7 @@ class Likes extends React.Component {
       updated: false,
       likeClassNames: "",
       dislikeClassNames: ""
-    }
+    };
   }
 
   updateLikes = () => {
@@ -55,9 +57,8 @@ class Likes extends React.Component {
 
   render(){
     return(
-      <div className="likes">
+      <div className="buttons-likes">
         <h2>Likes & Dislikes</h2>
-
 
         <div className="likes-counters">
           <h3>Counter Inside Button</h3>
@@ -73,10 +74,6 @@ class Likes extends React.Component {
           <div>
             <button className={this.state.dislikeClassNames} onClick={this.updateDislikes}>Dislike</button><span class="likes-counter">{this.state.dislikes}</span>
           </div>
-        </div>
-
-        <div className="likes-counters">
-          <h3>Icons Counter</h3>
         </div>
       </div>
     );
