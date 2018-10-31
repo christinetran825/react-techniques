@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-header {
@@ -17,13 +17,76 @@
   color: #61dafb;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 button {
   background-color: tomato;
   border: none;
   color: white;
-  padding: 16px;
+  padding: 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 32px;
+  font-size: 3em;
+}
+
+.icons {
+  /* color: tomato; */
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  /* font-size: 3em; */
+}
+
+.icons[data-icon*="twitter"] {
+  color: #1da1f2;
+}
+
+.icons[data-icon*="facebook"] {
+  color: #3b5998;
+}
+
+.icons[data-icon*="google"] {
+  color: #4285f4;
+}
+
+.icons[data-icon*="pinterest"] {
+  color: #bd081c;
+}
+
+.icons[data-icon*="linkedin"] {
+  color: #0077b5;
+}
+
+.icons[data-icon*="medium"] {
+  color: #00ab6c;
+}
+
+.icons[data-icon*="github"] {
+  color: #6e5494;
+}
+
+.icons[data-icon*="instagram"] {
+  color: #f56040;
+}
+
+li {
+  display: inline-block;
+}
+
+.shape {
+  border-radius: 20px;
+}
+
+.roundsquare {
+  /* line-height: inherit; */
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }

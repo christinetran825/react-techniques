@@ -26,30 +26,28 @@ class Likes extends React.Component {
 
     const brandsCircle = ["pinterest", "github"]
 
-    const brandsClassNames = ["", "square", "circle"]
-
     const brandsSimpleIcons = brandsSimple.map(brand =>
-      <FontAwesomeIcon className="icon-only" icon={['fab', `${brand}`]} size="3x"/>
+      <FontAwesomeIcon className="icons" icon={['fab', `${brand}`]} size="4x"/>
     )
 
     const brandsSquareIcons = brandsSquare.map(brand =>
-      <FontAwesomeIcon className="icon-only" icon={['fab', `${brand}`]} size="3x" />
+      <FontAwesomeIcon className="icons" icon={['fab', `${brand}`]} size="5x"/>
     )
 
     const brandsCircleIcons = brandsCircle.map(brand =>
-      <FontAwesomeIcon className="icon-only" icon={['fab', `${brand}`]} size="3x" />
+      <FontAwesomeIcon className="icons" icon={['fab', `${brand}`]} size="5x" />
     )
 
-    const brandsSimpleButtons =  brandsSimple.map(brand =>
+    const brandsSimpleButtons = brandsSimple.map(brand =>
       <button className="social-media"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
     )
 
-    const brandsSquareButtons =  brandsSquare.map(brand =>
-      <button className="social-media shape-square"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
+    const brandsSquareButtons = brandsSquare.map(brand =>
+      <button className="social-media shape"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} className="roundsquare" /></Link></button>
     )
 
-    const brandsCircleButtons =  brandsCircle.map(brand =>
-      <button className="social-media shape-circle"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
+    const brandsCircleButtons = brandsCircle.map(brand =>
+      <button className="social-media circle"><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
     )
 
     return(
