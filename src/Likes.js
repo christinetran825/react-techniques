@@ -75,6 +75,22 @@ class Likes extends React.Component {
             <button className={this.state.dislikeClassNames} onClick={this.updateDislikes}>Dislike</button><span class="likes-counter">{this.state.dislikes}</span>
           </div>
         </div>
+
+        <div className="button-group">
+          {/* <Link className="reaction" to="#"><img src="./images/likes-reactions/006-like.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/003-happy.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/001-in-love.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/004-crying.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/005-sick.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/002-angry.png"/></Link> */}
+
+          {/* <Link className="reaction" to="#"><img src="./images/likes-reactions/003-happy.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/001-in-love.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/004-crying.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/005-sick.png"/></Link>
+          <Link className="reaction" to="#"><img src="./images/likes-reactions/002-angry.png"/></Link> */}
+        </div>
+
       </div>
     );
   }
