@@ -65,6 +65,7 @@ a {
 button {
   background-color: tomato;
   border: none;
+  /* border: 1px solid black; */
   color: white;
   padding: 30px;
   text-align: center;
@@ -76,6 +77,18 @@ button {
 
 li {
   display: inline-block;
+}
+
+.icon-buttons .simpleBrands {
+  color: purple;
+}
+
+.icon-buttons .squaredBrands {
+  color: green;
+}
+
+.icon-buttons .circledBrands {
+  color: blue;
 }
 
 .rectangle {
@@ -96,5 +109,16 @@ li {
 
 .circle {
   border-radius: 50%;
-  padding-left: 25px;
+  padding: 25px;
+}
+
+.circle-border a {
+  color: tomato;
+}
+
+.circle-border {
+  border-radius: 50%;
+  padding: 25px;
+  background: white;
+  border: 4px solid tomato;
 }
