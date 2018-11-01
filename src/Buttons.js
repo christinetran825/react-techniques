@@ -1,6 +1,7 @@
 import React from 'react';
 import Likes from './Likes.js'
 import Icons from './Icons.js'
+import IconsBrands from './IconsBrands.js'
 
 class Buttons extends React.Component {
 
@@ -9,6 +10,7 @@ class Buttons extends React.Component {
       <section className="button-types">
         <Likes/>
         <Icons/>
+        <IconsBrands/>
       </section>
     );
   }
