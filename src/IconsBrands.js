@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ButtonSetUp from "./buttonSetup";
 import IconBtnSectionSetup from "./iconBtnSectionSetup";
 
-class Likes extends React.Component {
+class IconsBrands extends React.Component {
 
   constructor(props){
     super(props);
@@ -191,4 +191,4 @@ class Likes extends React.Component {
 
 }
 
-export default Likes;
+export default IconsBrands;
