@@ -1,19 +1,21 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "react-router-dom";
-// import { faCheckSquare as fasCheckSquare} from '@fortawesome/free-solid-svg-icons'
-// import { faCheckSquare as farCheckSquare } from '@fortawesome/free-regular-svg-icons'
+import ButtonSetUp from "./buttonSetup";
+import IconBtnSectionSetup from "./iconBtnSectionSetup";
 
 class Likes extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
+      prefix: "fab",
       simple: "simple",
       rectangle: "rectangle",
       square: "square",
       roundSquare: "square round",
       circle: "square circle",
+      circleBorder: "square circle-border",
     };
   }
 
@@ -44,64 +46,146 @@ class Likes extends React.Component {
     )
 
 //Buttons
-    const brandsRectButtons = brandsSimple.map(brand =>
-      <button className={this.state.rectangle}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
-    )
+  //Simple
+    const simpleRectButtons =
+      <ButtonSetUp
+        brandGroup={brandsSimple}
+        btnClassName={this.state.rectangle}
+        prefix={this.state.prefix}
+      />
 
-    const brandsSquareButtons = brandsSquare.map(brand =>
-      <button className={this.state.square}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
-    )
+    const simpleSquareButtons =
+      <ButtonSetUp
+        brandGroup={brandsSimple}
+        btnClassName={this.state.square}
+        prefix={this.state.prefix}
+      />
 
-    const brandsRoundSquareButtons = brandsSquare.map(brand =>
-      <button className={this.state.roundSquare}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
-    )
+    const simpleRoundSquareButtons =
+      <ButtonSetUp
+        brandGroup={brandsSimple}
+        btnClassName={this.state.roundSquare}
+        prefix={this.state.prefix}
+      />
 
-    const brandsCircleButtons = brandsCircle.map(brand =>
-      <button className={this.state.circle}><Link to="#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', `${brand}`]} /></Link></button>
-    )
+    const simpleCircleButtons =
+      <ButtonSetUp
+        brandGroup={brandsSimple}
+        btnClassName={this.state.circle}
+        prefix={this.state.prefix}
+      />
+
+    const simpleCircleBorderButtons =
+      <ButtonSetUp
+        brandGroup={brandsSimple}
+        btnClassName={this.state.circleBorder}
+        prefix={this.state.prefix}
+      />
+
+  //Square
+    const squareRectButtons =
+      <ButtonSetUp
+        brandGroup={brandsSquare}
+        btnClassName={this.state.rectangle}
+        prefix={this.state.prefix}
+      />
+
+    const squareSquareButtons =
+      <ButtonSetUp
+        brandGroup={brandsSquare}
+        btnClassName={this.state.square}
+        prefix={this.state.prefix}
+      />
+
+    const squareRoundSquareButtons =
+      <ButtonSetUp
+        brandGroup={brandsSquare}
+        btnClassName={this.state.roundSquare}
+        prefix={this.state.prefix}
+      />
+
+    const squareCircleButtons =
+      <ButtonSetUp
+        brandGroup={brandsSquare}
+        btnClassName={this.state.circle}
+        prefix={this.state.prefix}
+      />
+
+  //Circle
+    const circleRectButtons =
+      <ButtonSetUp
+        brandGroup={brandsCircle}
+        btnClassName={this.state.rectangle}
+        prefix={this.state.prefix}
+      />
+
+    const circleSquareButtons =
+      <ButtonSetUp
+        brandGroup={brandsCircle}
+        btnClassName={this.state.square}
+        prefix={this.state.prefix}
+      />
+
+    const circleRoundSquareButtons =
+      <ButtonSetUp
+        brandGroup={brandsCircle}
+        btnClassName={this.state.roundSquare}
+        prefix={this.state.prefix}
+      />
+
+    const circleCircleButtons =
+      <ButtonSetUp
+        brandGroup={brandsCircle}
+        btnClassName={this.state.circle}
+        prefix={this.state.prefix}
+      />
 
     return(
-      <div className="icons-brands">
-        <div className="icon-only no-counter">
-          <h2>Icons Only</h2>
-          {brandsSimpleIcons}
-          <br></br>
-          {brandsSquareIcons}
-          <br></br>
-          {brandsCircleIcons}
-          <br></br>
-        </div>
-        {/* <div className="icon-only counter">
-          <h2>Icons Only with Counter</h2>
-          {brandsSimpleIcons}
-          <br></br>
-          {brandsSquareIcons}
-          <br></br>
-          {brandsCircleIcons}
-          <br></br>
-        </div> */}
-        <div className="icon-buttons no-counter">
+      <section className="icons-only">
+        <h2>Icons Only</h2>
+        <section className="simpleBrands">
+          <div>
+            <h3>No Counter</h3>
+            {brandsSimpleIcons}
+            <br></br>
+            {brandsSquareIcons}
+            <br></br>
+            {brandsCircleIcons}
+            <br></br>
+          </div>
+        </section>
+
+        <section className="icon-buttons">
           <h2>Icon Buttons</h2>
-          <h3>Rectangle</h3>
-          {brandsRectButtons}
-          <h3>Square</h3>
-          {brandsSquareButtons}
-          <h3>Round Square</h3>
-          {brandsRoundSquareButtons}
-          <h3>Circle</h3>
-          {brandsCircleButtons}
-        </div>
-        {/* <div className="icon-buttons counter">
-          <h2>Icon Buttons with Counter</h2>
-          <h3>Rectangle</h3>
-          {brandsRectButtons}
-          <h3>Square</h3>
-          {brandsSquareButtons}
-          <h3>Round Square</h3>
-          {brandsRoundSquareButtons}
-          <h3>Circle</h3>
-          {brandsCircleButtons}
-        </div> */}
+          <IconBtnSectionSetup
+            sectionClassName="simpleBrands"
+            label="Simple Brand Icons"
+            shapeRect={simpleRectButtons}
+            shapeSquared={simpleSquareButtons}
+            shapeRoundSquared={simpleRoundSquareButtons}
+            shapeCircle={simpleCircleButtons}
+          />
+
+          {simpleCircleBorderButtons}
+
+          <IconBtnSectionSetup
+            sectionClassName="squaredBrands"
+            label="Round Square Background Icons"
+            shapeRect={squareRectButtons}
+            shapeSquared={squareSquareButtons}
+            shapeRoundSquared={squareRoundSquareButtons}
+            shapeCircle={squareCircleButtons}
+          />
+
+          <IconBtnSectionSetup
+            sectionClassName="circledBrands"
+            label="Circle Background Icons"
+            shapeRect={circleRectButtons}
+            shapeSquared={circleSquareButtons}
+            shapeRoundSquared={circleRoundSquareButtons}
+            shapeCircle={circleCircleButtons}
+          />
+        </section>
 
         <div className="icons-objects">
           <h3>Icons</h3>
@@ -139,7 +223,7 @@ class Likes extends React.Component {
             <FontAwesomeIcon icon={['far', 'square']} /> Cookie: <FontAwesomeIcon icon="cookie" />
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 
