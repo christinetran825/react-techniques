@@ -15,6 +15,11 @@ class Likes extends React.Component {
     return(
       <div className="credit-cards">
         <h2>Credit Cards</h2>
+        <div className="pay-methods">
+          <FontAwesomeIcon icon={['far', 'credit-card']} />
+          <FontAwesomeIcon icon={['fab', 'cc-paypal']} />
+          <FontAwesomeIcon icon={['fab', 'amazon-pay']} />
+        </div>
         <form>
           <label>Name on card:</label>
           <input type="text" name="name" />
