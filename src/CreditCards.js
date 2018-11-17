@@ -51,6 +51,34 @@ class Likes extends React.Component {
           <p>Save Shipping Address</p>
         </form>
         <h5>Billing</h5>
+        <form>
+          <p>My Billing Address is the same as my Shipping Address: (put shipping address here)</p>
+          <label>Email</label>
+          <input type="text" name="email" />
+          <br></br>
+          <label>Full Name</label>
+          <input type="text" name="name" />
+          <br></br>
+          <label>Country</label>
+          <input type="text" name="country" />
+          <br></br>
+          <label>Address</label>
+          <input type="text" name="address" />
+          <br></br>
+          <label>Apt / Floor / Suite / Other <span> (optional)</span></label>
+          <input type="text" name="address-opt" />
+          <br></br>
+          <label>City</label>
+          <input type="text" name="city" />
+          <br></br>
+          <label>State / Province / Region</label>
+          <input type="text" name="state" />
+          <br></br>
+          <label>Zip / Postal Code</label>
+          <input type="text" name="zip" />
+          <br></br>
+          <p>Save Billing Address</p>
+        </form>
         <h5>Payment Methods</h5>
         <div className="pay-methods">
           <FontAwesomeIcon icon={['far', 'credit-card']} />
