@@ -17,37 +17,47 @@ class Likes extends React.Component {
         <h2>Credit Cards</h2>
         <h5>Your Cart</h5>
         <h5>Shipping</h5>
-        <form>
-          <label>Email</label>
-          <input type="text" name="email"/>
-          <br></br>
-          <label>Full Name</label>
-          <input type="text" name="name" />
-          <br></br>
-          <label>Country</label>
-          <input type="text" name="country" />
-          <br></br>
-          <label>Address</label>
-          <input type="text" name="address" />
-          <br></br>
-          <label>Apt / Floor / Suite / Other <span> (optional)</span></label>
-          <input type="text" name="address-opt" />
-          <br></br>
-          <label>City</label>
-          <input type="text" name="city" />
-          <br></br>
-          <label>State / Province / Region</label>
-          <input type="text" name="state" />
-          <br></br>
-          <label>Zip / Postal Code</label>
-          <input type="text" name="zip" />
-          <br></br>
-          <label>Phone <span>(in case of delivery issues)</span></label>
-          <input type="number" name="phone" />
-          <br></br>
-          <label>Special Delivery Instructions <span>(optional)</span></label>
-          <textarea className="form-control" id="special-message"></textarea>
-          <br></br>
+        <form id="shipping">
+          <div className="form-group">
+            <label>Email</label>
+            <input type="text" name="email" className="form-control"/>
+          </div>
+          <div className="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" />
+          </div>
+          <div className="form-group">
+            <label>Country</label>
+            <input type="text" name="country" />
+          </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input type="text" name="address" />
+          </div>
+          <div className="form-group">
+            <label>Apt / Floor / Suite / Other <span> (optional)</span></label>
+            <input type="text" name="address-opt" />
+          </div>
+          <div className="form-group">
+            <label>City</label>
+            <input type="text" name="city" />
+          </div>
+          <div className="form-group">
+            <label>State / Province / Region</label>
+            <input type="text" name="state" />
+          </div>
+          <div className="form-group">
+            <label>Zip / Postal Code</label>
+            <input type="text" name="zip" />
+          </div>
+          <div className="form-group">
+            <label>Phone <span>(in case of delivery issues)</span></label>
+            <input type="number" name="phone" />
+          </div>
+          <div className="form-group">
+            <label>Special Delivery Instructions <span>(optional)</span></label>
+            <textarea className="form-control" id="special-message"></textarea>
+          </div>
           <div className="form-check form-check-inline">
             <input type="checkbox" className="form-check-input"/>
             <label className="form-check-label">Save Shipping Address</label>
@@ -59,31 +69,43 @@ class Likes extends React.Component {
             <input type="checkbox" className="form-check-input"/>
             <label className="form-check-label">My Billing Address is the same as my Shipping Address: (put shipping address here)</label>
           </div>
-          <label>Email</label>
-          <input type="text" name="email" />
-          <br></br>
-          <label>Full Name</label>
-          <input type="text" name="name" />
-          <br></br>
-          <label>Country</label>
-          <input type="text" name="country" />
-          <br></br>
-          <label>Address</label>
-          <input type="text" name="address" />
-          <br></br>
-          <label>Apt / Floor / Suite / Other <span> (optional)</span></label>
-          <input type="text" name="address-opt" />
-          <br></br>
-          <label>City</label>
-          <input type="text" name="city" />
-          <br></br>
-          <label>State / Province / Region</label>
-          <input type="text" name="state" />
-          <br></br>
-          <label>Zip / Postal Code</label>
-          <input type="text" name="zip" />
-          <br></br>
-          <p>Save Billing Address</p>
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input type="text" name="email" />
+          </div>
+          <div className="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" />
+          </div>
+          <div className="form-group">
+            <label>Country</label>
+            <input type="text" name="country" />
+          </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input type="text" name="address" />
+          </div>
+          <div className="form-group">
+            <label>Apt / Floor / Suite / Other <span> (optional)</span></label>
+            <input type="text" name="address-opt" />
+          </div>
+          <div className="form-group">
+            <label>City</label>
+            <input type="text" name="city" />
+          </div>
+          <div className="form-group">
+            <label>State / Province / Region</label>
+            <input type="text" name="state" />
+          </div>
+          <div className="form-group">
+            <label>Zip / Postal Code</label>
+            <input type="text" name="zip" />
+          </div>
+          <div className="form-check form-check-inline">
+            <input type="checkbox" className="form-check-input"/>
+            <label className="form-check-label">Save Billing Address</label>
+          </div>
         </form>
         <h5>Payment Methods</h5>
         <div className="pay-methods">
