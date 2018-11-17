@@ -17,7 +17,7 @@ class Likes extends React.Component {
         <h2>Credit Cards</h2>
         <h5>Your Cart</h5>
         <h5>Shipping</h5>
-        <form id="shipping">
+        <form id="shipping" novalidate>
           <div className="form-group">
             <label>Email</label>
             <input type="text" name="email" className="form-control"/>
@@ -44,7 +44,10 @@ class Likes extends React.Component {
           </div>
           <div className="form-group">
             <label>State / Province / Region</label>
-            <input type="text" name="state" />
+            <select id="inputState" className="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
           </div>
           <div className="form-group">
             <label>Zip / Postal Code</label>
@@ -64,7 +67,7 @@ class Likes extends React.Component {
           </div>
         </form>
         <h5>Billing</h5>
-        <form>
+        <form id="billing" novalidate>
           <div className="form-check form-check-inline">
             <input type="checkbox" className="form-check-input"/>
             <label className="form-check-label">My Billing Address is the same as my Shipping Address: (put shipping address here)</label>
@@ -92,7 +95,10 @@ class Likes extends React.Component {
           </div>
           <div className="form-group">
             <label>City</label>
-            <input type="text" name="city" />
+            <select id="inputState" className="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
           </div>
           <div className="form-group">
             <label>State / Province / Region</label>
