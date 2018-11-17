@@ -19,7 +19,7 @@ class Likes extends React.Component {
         <h5>Shipping</h5>
         <form>
           <label>Email</label>
-          <input type="text" name="email" />
+          <input type="text" name="email"/>
           <br></br>
           <label>Full Name</label>
           <input type="text" name="name" />
@@ -46,13 +46,19 @@ class Likes extends React.Component {
           <input type="number" name="phone" />
           <br></br>
           <label>Special Delivery Instructions <span>(optional)</span></label>
-          <input type="text" name="delivery-message" />
+          <textarea className="form-control" id="special-message"></textarea>
           <br></br>
-          <p>Save Shipping Address</p>
+          <div className="form-check form-check-inline">
+            <input type="checkbox" className="form-check-input"/>
+            <label className="form-check-label">Save Shipping Address</label>
+          </div>
         </form>
         <h5>Billing</h5>
         <form>
-          <p>My Billing Address is the same as my Shipping Address: (put shipping address here)</p>
+          <div className="form-check form-check-inline">
+            <input type="checkbox" className="form-check-input"/>
+            <label className="form-check-label">My Billing Address is the same as my Shipping Address: (put shipping address here)</label>
+          </div>
           <label>Email</label>
           <input type="text" name="email" />
           <br></br>
